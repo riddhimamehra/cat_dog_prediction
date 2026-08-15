@@ -1,8 +1,8 @@
-# 🐱🐶 Cat vs Dog Image Classification using MobileNetV2
+# Cat vs Dog Image Classification using MobileNetV2
 
 A deep learning image classification project that uses **Transfer Learning with MobileNetV2** to classify images as either **Cat** or **Dog**.
 
-## 🚀 Project Overview
+## Project Overview
 
 Instead of training a CNN completely from scratch, this project uses the **pre-trained MobileNetV2 architecture**, which was originally trained on the ImageNet dataset.
 
@@ -10,7 +10,11 @@ The pretrained convolutional base is initially frozen and used as a feature extr
 
 After the initial training, the MobileNetV2 model is fine-tuned by unfreezing layers and training with a very small learning rate.
 
-## 🧠 Model Architecture
+## Live Demo
+
+**[Cat vs Dog Classifier — Live Demo](https://catdogprediction-q5d44t3lbpggtbe6kdk7yj.streamlit.app/)**
+
+## Model Architecture
 
 The model consists of:
 
@@ -37,7 +41,7 @@ Dense (1, Sigmoid)
     Cat / Dog
 ```
 
-## 🔄 Why MobileNetV2 / Transfer Learning?
+## Why MobileNetV2 / Transfer Learning?
 
 The initial CNN approach was not performing reliably on individual images despite achieving around **95% accuracy** during evaluation. The main issue was that the dataset was relatively small, making it difficult for a CNN trained from scratch to learn robust visual features and generalize well to new images.
 
@@ -49,7 +53,7 @@ The model was subsequently fine-tuned by unfreezing layers of MobileNetV2 while 
 
 This approach resulted in much more reliable image classification, with the final model achieving **100% accuracy on the 200-image test set**.
 
-## 📊 Training
+## Training
 
 ### Initial Training
 
@@ -67,7 +71,7 @@ This approach resulted in much more reliable image classification, with the fina
 - Learning rate: `1e-5`
 - Validation split: 20%
 
-## 📈 Model Evaluation
+## Model Evaluation
 
 The model was evaluated on a separate test set using:
 
@@ -104,7 +108,7 @@ weighted avg       1.00      1.00      1.00       200
 
 The model correctly classified all **200 test images**: 100 cats and 100 dogs.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - TensorFlow
@@ -116,7 +120,7 @@ The model correctly classified all **200 test images**: 100 cats and 100 dogs.
 - Scikit-learn
 - PIL
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 cat_dog_prediction/
@@ -126,7 +130,7 @@ cat_dog_prediction/
 └── README.md
 ```
 
-## 🎯 Key Concepts Learned
+## Key Concepts Learned
 
 - Convolutional Neural Networks
 - Transfer Learning
@@ -139,7 +143,7 @@ cat_dog_prediction/
 - Confusion Matrix
 - Precision, Recall and F1-score
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Add data augmentation
 - Implement Early Stopping
